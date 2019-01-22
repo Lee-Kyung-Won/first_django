@@ -1,6 +1,7 @@
 # dojo/views.py
 
 import os
+from django.conf import settings
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 
