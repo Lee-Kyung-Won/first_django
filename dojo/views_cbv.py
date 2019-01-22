@@ -14,7 +14,7 @@ class PostListView1(object):
             <p>여러분의 파이썬&장고 페이스메이커가 되겠습니다.</p>
         '''
 
-post_list1 = PostListView1.as_view()
+# post_list1 = PostListView1.as_view()
 
 
 class PostListView2(TemplateView):
