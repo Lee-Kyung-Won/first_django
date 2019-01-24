@@ -30,6 +30,8 @@ class Post(models.Model):
 
     status = models.CharField(max_length=1, choices=STATUS_CHOICES)
 
+    tap_set = models.ManyToManyField('Tag')
+
     #created_at = models.DataTimeField(auto_new_add=True)
     #updated_at = models.DataTimeField(auto_now=True)
 
@@ -41,8 +43,15 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    #post = models.ForeignKey(Post)
+    # post = models.ForeignKey(Post)
     author = models.CharField(max_length=20)
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+class Tag(models.Model):
+    name = models.CharField(max_length=50, unique=True)
+
+    def __str__(self):
+        return self.name
+
