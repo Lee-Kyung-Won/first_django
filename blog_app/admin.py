@@ -30,7 +30,7 @@ class PostAdmin(admin.ModelAdmin):
         self.message_user(request, '{}건의 포스팅을 Published상태로 변경'.format(updated_count))   # django message framework 활용
     make_published.short_description = '지정 포스팅을 Published상태로 변경합니다.'
 
-# admin.site.register(Post, PostAdmin)
+#admin.site.register(Post, PostAdmin)
 
 
 @admin.register(Comment)
