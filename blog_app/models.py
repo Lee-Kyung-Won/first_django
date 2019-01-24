@@ -30,7 +30,7 @@ class Post(models.Model):
 
     status = models.CharField(max_length=1, choices=STATUS_CHOICES)
 
-    tap_set = models.ManyToManyField('Tag')
+    tap_set = models.ManyToManyField('Tag', blank=True)
 
     #created_at = models.DataTimeField(auto_new_add=True)
     #updated_at = models.DataTimeField(auto_now=True)
